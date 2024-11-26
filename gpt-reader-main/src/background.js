@@ -75,7 +75,7 @@ async function callGpt(base64Image,question) {
   console.log("Calling audio GPT");
   const mp3 = await openai.audio.speech.create({
     model: "tts-1",
-    voice: "alloy",
+    voice: "onyx",
     input:  responseText,
   });
 
