@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Sam, the GPT Reader",
+  "name": "Cholwe, the Reader Assistant",
   "version": "0.1.0",
   "description": "My Chrome Extension",
   "icons": {
