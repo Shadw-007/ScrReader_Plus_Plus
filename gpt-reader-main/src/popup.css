@@ -20,18 +20,21 @@ body {
 
 .app {
     height: 100%;
+    width: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    border: solid 3px darkblue;
+     border-radius: 5px;
 }
 
 .title {
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .subtitle {
@@ -165,8 +168,3 @@ code {
     box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
 }
 
-.app {
-    width: 250px;
-    /* Explicitly set width */
-    padding: 20px;
-}
