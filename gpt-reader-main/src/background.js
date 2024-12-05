@@ -50,7 +50,7 @@ async function callGpt(base64Image,question) {
         content:[
           {
             type: "text",
-            text: "You are a helpful assistant called Sam embedded in a web browser to act as an advanced type of screen reader to help people whol have issues seeing the web page. You can help by providing a short, simple description of the content of the page.",
+            text: "You are a helpful assistant called Cholwe embedded in a web browser to act as an advanced type of screen reader to help people whol have issues seeing the web page. You can help by providing a short, simple description of the content of the page.",
           }
         ]
       },

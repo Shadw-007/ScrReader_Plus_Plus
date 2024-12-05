@@ -1,11 +1,9 @@
 # <img src="public/icons/icon_48.png" width="45" align="left"> Gpt Screen Reader
 
-This extension was written as a final university project in the possibility of using Language Learning Modules (LLMs) to give visually impaired students a chance to learn and gain knowledge from the internet.
+This extension was written as a final university project in the possibility of using LLMs to give visually impaired students a chance to learn and gain knowledge from the internet.
 
-Tradisional screen readers are extremely simplistic, slow and can't provide context to the user. With the ability to integrate AI, you are able to learn a lot more than what is just displayed on the screen.
+Traditional screen readers are extremely simplistic, slow and can't provide context to the user. With the ability to integrate AI, you are able to learn a lot more than what is just displayed on the screen. Therefore, I thought of coming up with this programme that would work with screen readers to add onto what the traditional screen readers lack.
 
-
-Ohh and of course, please do not fully rely on the answers provided and expect some rough endges.
 
 ## Features
 
@@ -31,10 +29,5 @@ I would however reccomend turning off auto-topup and enforcing spending limits j
 
 Here's a list of potential enhancements and features to consider:
 - Addition of more keyboard shortcuts.
-- Capability to record while a keyboard shortcut is being held down.
-- Provision of a structured approach around a user goal and chat history.
 
-
-
-Significiant portions of this code were constructed with the help of Github Copilot 
 

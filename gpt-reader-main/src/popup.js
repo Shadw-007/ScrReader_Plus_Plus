@@ -73,8 +73,7 @@ let mediaRecorder;
 // Get audio stream from user's microphone
 // Record audio and send it to the background script
 // The background script will send it to the OpenAI API
-// TODO: Add error handling
-// TODO: set a max recording time somehow
+
 navigator.mediaDevices.getUserMedia({ audio: true })
   .then(stream => {
     mediaRecorder = new MediaRecorder(stream);
