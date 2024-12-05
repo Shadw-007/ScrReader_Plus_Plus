@@ -28,7 +28,7 @@ body {
     text-align: center;
     padding: 30px;
     border: solid 3px darkblue;
-     border-radius: 5px;
+    border-radius: 5px;
 }
 
 .title {
@@ -113,6 +113,31 @@ code {
 
 .button.is-clicked:before {
     animation: blastOut 1s;
+}
+
+#search-form input {
+  width: 100%;
+  font-size: 12px;
+  padding: 10px 25px;
+  border: 2px solid darkblue;
+  border-right: none;
+  border-radius: 2px;
+}
+#search-form button {
+  position: absolute;
+  margin-right: 1.7rem;
+  margin-top: -.3rem;
+  right: 0;
+   background: linear-gradient(to bottom, rgb(25, 21, 149) 0%, rgb(13, 4, 104) 100%);
+  outline: none;
+  border: solid 2px darkblue;
+  border-radius: 75%;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #eee;
 }
 
 @keyframes pulse {

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPT Screen Reader</title>
     <link rel="stylesheet" href="popup.css" />
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <div class="app">
@@ -13,6 +15,10 @@
     <input type="text" id="question-input" class = "hidden" placeholder="Ask a specific question" />
     <button id="read-button" class="button">Describe Web Page</button>
     <button id="ask-button" class="button">Speak a Question</button>
+    <form action="https://www.google.com/search" method="get" id="search-form" target="_blank">
+      <input type="text" name="q" placeholder="Question Search..." autocomplete="off" autofocus>
+      
+    </form>
   <script src="popup.js"></script>
 </body>
 </html>

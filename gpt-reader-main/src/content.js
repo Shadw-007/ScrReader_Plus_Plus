@@ -1,3 +1,4 @@
+//Hover to speech function
 // content.js
 console.log("Hover-to-speech content script loaded!");
 

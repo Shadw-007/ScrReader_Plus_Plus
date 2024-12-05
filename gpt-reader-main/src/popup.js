@@ -150,3 +150,74 @@ navigator.mediaDevices.getUserMedia({ audio: true })
 
   document.getElementById('read-button').addEventListener('click', checkApiKey);
 })();
+
+// Question Search
+// DOM elements that need access
+const searchForm = document.querySelector("#search-form");
+const searchFormInput = searchForm.querySelector("input");
+
+
+//Adding speech recognition (evaluating whether browser supports speech recognition with or without a prefix)
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+if(SpeechRecognition){
+  console.log("Your Browser supports speech Recognition");
+
+  //button shows up in supported browsers and disappears in non supported browsers
+  searchForm.insertAdjacentHTML(
+    "beforeend",
+    '<button type="button"><i class="bx bxs-microphone"></i></button>'
+  );
+  const micBtn = searchForm.querySelector("button");
+  const micIcon = micBtn.querySelector("i");
+
+  //creating a new speech recognition object
+  const recognition = new SpeechRecognition();
+  recognition.continuous = true; 
+
+
+  micBtn.addEventListener("click", micBtnClick);
+  function micBtnClick() {
+    //check the state of the current button
+    if (micIcon.classList.contains("bxs-microphone")) {
+      //Start Speech Recognition
+      recognition.start();
+    } else {
+      //Stop Speech Recognition
+      recognition.stop();
+    }
+  }
+
+  recognition.addEventListener("start", startSpeechRecognition); // alternative <=> recognition.onstart = function() {...}
+  function startSpeechRecognition() {
+    micIcon.classList.remove("bxs-microphone");
+    micIcon.classList.add("bxs-microphone-off");
+    searchFormInput.focus();
+    console.log("Speech Recognition Active");
+  }
+  recognition.addEventListener("end", endSpeechRecognition); // alternative <=> recognition.onend = function() {...}
+  function endSpeechRecognition() {
+    micIcon.classList.remove("bxs-microphone-off");
+    micIcon.classList.add("bxs-microphone");
+    searchFormInput.focus();
+    console.log("Speech Recognition Disconnected");
+  }
+
+  //filling in input box with spoken speech
+  recognition.addEventListener("result", resultOfSpeechRecognition); // alternative <=> recognition.onresult = function() {...}
+  function resultOfSpeechRecognition(event) {
+    const currentResultIndex = event.resultIndex;
+    const transcript = event.results[currentResultIndex][0].transcript;
+    searchFormInput.value = transcript; // displays what user says. If they change, new speech is displayed
+
+    
+
+    // showing results as soon as search form is submitted
+    setTimeout(() =>{
+      searchForm.submit();
+    }, 750);
+  }
+}
+else{
+  console.log("Your Browser does not support speech Recognition");
+}
