@@ -17,10 +17,9 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "storage" ,
+    "storage",
     "activeTab",
-    "scripting "
-
+    "scripting"
   ],
   "options_ui": {
     "page": "options.html",
@@ -41,7 +40,6 @@
       "description": "Describe the page"
     }
   },
-  
   "web_accessible_resources": [
     {
       "resources": [
@@ -55,6 +53,15 @@
         "http://*/*",
         "https://*/*"
       ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["content.js"]
     }
   ]
 }
